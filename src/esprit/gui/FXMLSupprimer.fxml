@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.gui.FXMLSupprimerController">
+   <children>
+      <JFXComboBox fx:id="ville" layoutX="19.0" layoutY="29.0" onAction="#afficher_click" prefHeight="25.0" prefWidth="126.0" promptText="Entrer une ville" />
+      <TableView fx:id="table" layoutX="19.0" layoutY="116.0" onMouseClicked="#selection" prefHeight="200.0" prefWidth="563.0">
+        <columns>
+          <TableColumn fx:id="nameHotel" prefWidth="98.0" text="Nom" />
+          <TableColumn fx:id="typeHotel" prefWidth="110.0" text="Nombre d'étoile" />
+            <TableColumn fx:id="nbre_chambre" prefWidth="166.0" text="Nombre de chambre totale" />
+            <TableColumn fx:id="nbre_de_chambre_despo" prefWidth="188.0" text="Nombre de chambre disponible" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn" disable="true" layoutX="482.0" layoutY="341.0" mnemonicParsing="false" onAction="#supprimer_click" text="Supprimer" />
+      <Label layoutX="177.0" layoutY="13.0" prefHeight="29.0" prefWidth="247.0" text="Supprimer Hotel" textAlignment="CENTER" textFill="#d02525">
+         <font>
+            <Font name="Georgia Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
